@@ -1,9 +1,13 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
+import { library } from '@fortawesome/fontawesome-svg-core';
+import { faImage, faFont, faPencil, faFilter, faTrash, faDownload } from '@fortawesome/free-solid-svg-icons';
+
 import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
 
+library.add(faImage, faFont, faPencil, faFilter, faTrash, faDownload);
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>

@@ -1,38 +1,51 @@
-.App {
-  text-align: center;
-}
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.editor {
   display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  flex-flow: column;
+  height: 100vh;
 }
 
-.App-link {
-  color: #61dafb;
+.editor .toolbox {
+  padding: 0.5em;
+  background-color: #414141;
+  display: flex;
+  gap: 0.5em;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+.editor .canvasbox {
+  overflow: auto;
+  flex: 1;
+  background-color: #777;
+}
+
+.canvasbox canvas {
+  width: 1000px;
+  height: 500px;
+}
+
+.toolbox {
+  button {
+    width: 32px;
+    height: 32px;
+    position: relative;
+    font-size: 16px;
+    border: none;
+    background-color: #ccc;
+    border-radius: 0.2em;
   }
-  to {
-    transform: rotate(360deg);
+
+  button.active {
+    background-color: #edbd50;
+  }
+
+  input[type=file] {
+    width: 100%;
+    opacity: 0;
+    position: absolute;
+    inset: 0;
+  }
+
+  select {
+    border-radius: 0.2em;
+    min-width: 10em;
   }
 }
