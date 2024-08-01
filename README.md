@@ -1,5 +1,5 @@
 # PhotoZri
-A simple image editor app created with Fabric.js v6 and React.
+[PhotoZri](https://codezri.org/photozri), A simple image editor app created with Fabric.js v6 and React.
 
 ![](./media/preview.png)
 
