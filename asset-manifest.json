@@ -1,15 +1,15 @@
 {
   "files": {
-    "main.css": "/photozri/static/css/main.456f8555.css",
-    "main.js": "/photozri/static/js/main.86e0a94c.js",
+    "main.css": "/photozri/static/css/main.478911fc.css",
+    "main.js": "/photozri/static/js/main.8550a558.js",
     "static/js/453.b20b865a.chunk.js": "/photozri/static/js/453.b20b865a.chunk.js",
     "index.html": "/photozri/index.html",
-    "main.456f8555.css.map": "/photozri/static/css/main.456f8555.css.map",
-    "main.86e0a94c.js.map": "/photozri/static/js/main.86e0a94c.js.map",
+    "main.478911fc.css.map": "/photozri/static/css/main.478911fc.css.map",
+    "main.8550a558.js.map": "/photozri/static/js/main.8550a558.js.map",
     "453.b20b865a.chunk.js.map": "/photozri/static/js/453.b20b865a.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.456f8555.css",
-    "static/js/main.86e0a94c.js"
+    "static/css/main.478911fc.css",
+    "static/js/main.8550a558.js"
   ]
 }
