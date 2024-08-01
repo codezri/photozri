@@ -4,6 +4,21 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 
 const Toolbox = ({ canvas, currentFilter, setCurrentFilter }) => {
   const [drawingMode, setDrawingMode] = useState(false);
+  const [resizeMode, setResizeMode] = useState(false);
+  const [canvasSize, setCanvasSize] = useState({
+    width: 1000,
+    height: 500
+  });
+
+  useEffect(() => {
+    if(!canvas) return;
+    canvas.setDimensions(canvasSize);
+  }, [canvas, canvasSize]);
+
+  useEffect(() => {
+    if(!canvas) return;
+    setCanvasSize({width: canvas.getWidth(), height: canvas.getHeight()});
+  }, [canvas]);
 
   useEffect(() => {
     if(!canvas || 
@@ -40,7 +55,8 @@ const Toolbox = ({ canvas, currentFilter, setCurrentFilter }) => {
     
     reader.onload = async (e) => {               
       const image = await Image.fromURL(e.target.result);
-      image.scale(0.5);
+      const scale = Math.min(canvasSize.width / image.width, canvasSize.height / image.height, 1) * 0.5;
+      image.scale(scale);
       canvas.add(image);
       canvas.centerObject(image);
       canvas.setActiveObject(image); 
@@ -106,6 +122,23 @@ const Toolbox = ({ canvas, currentFilter, setCurrentFilter }) => {
           <option value="polaroid">Polaroid</option>
           <option value="grayscale">Grayscale</option>
         </select>
+      }
+      <button title="Resize canvas" 
+        onClick={() => setResizeMode(!resizeMode)} 
+        className={resizeMode ? 'active' : ''}>
+        <FontAwesomeIcon icon="up-right-and-down-left-from-center" />
+      </button>
+      {resizeMode && 
+        <>
+          <input 
+            type="number" 
+            value={canvasSize.width} 
+            onChange={(e) => setCanvasSize({...canvasSize, width: parseInt(e.target.value)})}/>
+          <input 
+            type="number" 
+            value={canvasSize.height} 
+            onChange={(e) => setCanvasSize({...canvasSize, height: parseInt(e.target.value)})}/>
+        </>
       }
       <button title="Clear all" onClick={clearAll}>
         <FontAwesomeIcon icon="trash" />

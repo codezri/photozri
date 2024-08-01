@@ -6,6 +6,7 @@ import {
   faFont, 
   faPencil, 
   faFilter, 
+  faUpRightAndDownLeftFromCenter,
   faTrash, 
   faDownload,
   faCode 
@@ -15,7 +16,16 @@ import './index.css';
 import App from './components/App';
 import reportWebVitals from './reportWebVitals';
 
-library.add(faImage, faFont, faPencil, faFilter, faTrash, faDownload, faCode);
+library.add(
+  faImage, 
+  faFont, 
+  faPencil, 
+  faFilter, 
+  faUpRightAndDownLeftFromCenter, 
+  faTrash, 
+  faDownload, 
+  faCode
+);
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>

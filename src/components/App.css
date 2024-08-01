@@ -17,11 +17,6 @@
   background-color: #777;
 }
 
-.canvasbox canvas {
-  width: 1000px;
-  height: 500px;
-}
-
 .toolbox button {
   width: 32px;
   height: 32px;
@@ -45,5 +40,10 @@
 .toolbox select {
   border-radius: 0.2em;
   min-width: 10em;
+}
+
+.toolbox input[type=number] {
+  border-radius: 0.2em;
+  max-width: 4em;
 }
 
