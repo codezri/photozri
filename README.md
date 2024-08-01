@@ -1,7 +1,7 @@
 # PhotoZri
 A simple image editor app created with Fabric.js v6 and React.
 
-![](./media/preview.gif)
+![](./media/preview.png)
 
 ## How to run this project?
 Clone the repository and install dependencies:
